@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Css/sobre.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <script src="../Js/conta.js" defer></script>
+        <script src="../Js/Perfil.js" defer></script>
+        <link rel="icon" type="image/x-icon" href="../imagens/icon.png">
+        <title>Sobre TF</title>
+    </head>
+    <body>
+
+
+
+        <nav class="Menu-bottom">
+            <div class="logo">
+
+
+                <h1> <span class="icon"><i class="bi bi-people"></i></span> Sobre nós</h1>
+            </div>
+
+            
+            <div class="bottom-list">
+                <ul>
+                    <li class="bottom-item">
+                        <a class="bottom-linkDaConta" onclick="toggleMenu()">
+                            <span class="icon"><i class="bi bi-person-circle"></i></span>
+                            <span class="txt-link">Conta</span> 
+                        </a>
+                    </li>
+                    
+                    <div class="account-menu" id="accountMenu">
+                        <ul>
+                            <li> <a class="bottom-perfil" id="link" onclick="abrirModal()">
+                                <span class="txt-link"><span class="icon"><i class="bi bi-person-circle"></i></span> Perfil</span> 
+                                </a>
+                            </li>
+                            <li><a class="bottom-perfil" id="link2" onclick="abrirModal2()">
+                                <span class="txt-link"><span class="icon"><i class="bi bi-gear"></i></span> Configs</span> 
+                                </a></li>
+                            <li><a href="PaginaInicial.html"><span class="icon"><i class="bi bi-door-open"></i></span>Log-out</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="menu-lateral">
+            <div class="expandir">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul>
+
+                <li class="item-menu">
+                    <a href="Site.html">
+                        <span class="icon"><i class="bi bi-house"></i></span>
+                        <span class="txt-link">Home</span>
+                    </a>
+
+                <li class="item-menu">
+                    <a onclick="toggleSubMenu(event)">
+                        <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                        <span class="txt-link">Cursos</span>
+                    </a>
+                </li>
+                        <div class="sub-menu" id="cursosSubMenu">
+                            <li class="item-menu3"><a href="Videos.html">
+                                <span class="icon"><i class="bi bi-play-btn"></i></span>
+                                <span class="txt-link">Vídeos</span>
+                            </a></li>
+                            <li class="item-menu3"><a href="Apostilas.html">
+                                <span class="icon"><i class="bi bi-book"></i></span>
+                                <span class="txt-link">Apostilas</span>
+                            </a></li>
+                            <li class="item-menu3"><a href="Podcasts.html">
+                                <span class="icon"><i class="bi bi-mic"></i></span>
+                                <span class="txt-link">Podcasts</span>
+                            </a></li>
+                        </div>
+
+                <li class="item-menu-especial"><a>
+                    <span class="icon"><i class="bi bi-people"></i></span>
+                    <span class="txt-link">Sobre</span>
+                </a></li>
+
+                <li class="item-menu2">
+                    <a href="PaginaInicial.html">
+                        <span class="icon"><i class="bi bi-box-arrow-right"></i></span>
+                        <span class="txt-link">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="configs e perfil">
+        <!-- Fundo embaçado -->
+        <div id="fundo" class="fundo-embaçado" onclick="fecharModal()"></div>
+
+        <div id="modal" class="modal">
+            <br>
+            <h6>ﾠPerfil: </h6>
+                <br>
+                <div class="pad" >
+                <div id="perfil">
+                <h3>Usuário: <span id="nomeUsuario">Carregando...</span></h3>
+                <h3>Email: <span id="emailUsuario">Carregando...</span></h3>
+                </div>
+            <button class="fechar" onclick="fecharModal()">Fechar</button>
+            </div>
+        </div> 
+        </div> 
+
+        <div id="fundo2" class="fundo-embaçado" onclick="fecharModal2()"></div>
+        <div id="modal2" class="modal">
+            <br>
+            <h6>Configurações:</h6>
+            <br>
+            <div class="pad" >
+                <ul>
+                    <li> <a href="Login.html" class="bottom-perfil"><h3>
+                        <span class="txt-link"><span class="icon"><i class="bi bi-arrow-repeat"></i></span> Trocar de conta</span> 
+                        </h3></a>
+                    </li>
+                    <li> <a href="PaginaInicial.html" class="bottom-perfil"><h3>
+                            <span class="txt-link"><span class="icon"><i class="bi bi-door-open"></i></span> Desconectar conta</span> 
+                            </h3></a>
+                    </li>
+                </ul>
+                <button class="fechar" onclick="fecharModal2()">Fechar</button>
+            </div>
+        </div>
+    </nav>
+        <main>
+            <div class="inicial">
+                <h4>Sobre a TF</h4>
+                <h3>Conheça nosso projeto!!!</h3>
+                <br>
+            </div>
+
+                <div class="conteudo">
+                    <br>
+                    <h2>O que é a Teen Finance?</h2>
+                    <h3> Somos uma plataforma criada com o intuito de empoderar jovens e adultos com o conhecimento e as habilidades necessárias para tomar decisões financeiras inteligentes. Noosa ideia veio do fato de que a educação financeira é algo tão importante e ao mesmo tempo tão complexa. Acreditamos que a educação financeira é essencial para o sucesso pessoal e profissional, e nosso objetivo é tornar esse assunto complexo em um aprendizado acessível e divertido.
+                        No Teen Finance, incentivamos a curiosidade e a exploração, ajudando você a desenvolver uma mentalidade financeira saudável desde cedo. Junte-se a nós nessa jornada para se tornar um adolescente financeiramente consciente e preparado para o futuro!
+                        Vamos juntos construir um amanhã mais seguro e próspero!
+                    </h3>
+                    <br>
+                    <h2>Por que "Teen Finance"?</h2>
+                    <h3>O nome Teen Finance veio da ideia de que hoje em dia nas escolas não há incentivo em ensinar as crianças e adolescentes à economizarem e aprendererm desde cedo sobre o que é ter educação financeira. Embora acolhemos pessoas de todas as idades, nosso foco é voltado ao público mais jovem, já que o mesmo na maioria das vezes não compreendem sobre o assunto, o que já não é tão comum acontecer em faixas etárias maiores. </h3>
+                </div>
+              <br><br>  
+
+              <div class="inicial2">
+                <h5>Venha aprender com a gente!!!</h5>
+                <br>
+                <div class="icons">
+                <h3>ﾠcontate-nos:</h3>
+                <span class="icon2"><i class="bi bi-youtube"></i></span>
+                <span class="icon2"><i class="bi bi-instagram"></i></span>
+                <span class="icon2"><i class="bi bi-twitter-x"></i></span>
+                <br>
+                </div>
+                <p>&copy; 2024 Teen Finance. Todos os direitos reservados.</p>
+            </div>
+        </main>  
+        <article><!-- div semantica para abrigar imagens -->
+            <div class="image-container">
+            <img src="../imagens/menina.png" alt="menina inteligênte o">
+            </div>
+        </article> 
+    </body>
+</html>
